@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meet Our Affiliates | West Delray Network</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #171719; color: #f5f5f6; font-family: Arial, Helvetica, sans-serif; }
+    .network-banner { position: sticky; top: 0; z-index: 1; height: 50px; min-height: 50px; color: #f5f5f6; background: linear-gradient(105deg, #252528 0%, #171719 100%); border-bottom: 1px solid rgba(255,255,255,.2); box-shadow: 0 3px 10px rgba(0,0,0,.18); }
+    .network-banner-inner { display: flex; width: calc(100% - 30px); height: 50px; align-items: center; gap: 10px; padding-right: 13px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; white-space: nowrap; }
+    .network-banner-inner::-webkit-scrollbar { display: none; }
+    .network-banner-label { flex: 0 0 auto; padding-left: 10px; margin-right: 9px; border-left: 3px solid #e34242; color: #f7f7f8; font-size: 16px; font-weight: 800; letter-spacing: -.2px; }
+    .network-pills { display: flex; flex: 0 0 auto; align-items: center; gap: 10px; }
+    .network-pill { display: grid; width: 40px; height: 40px; flex: 0 0 auto; place-items: center; padding: 3px; color: #151515; background: linear-gradient(145deg, #fff, #d8d8d8); border: 1px solid #4a4a4e; border-radius: 7px; box-shadow: 0 0 0 1px rgba(255,255,255,.13), 0 2px 4px rgba(0,0,0,.4); }
+    .network-pill img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 4px; }
+    .network-pill.wide-mark { width: 154px; min-width: 154px; height: 40px; padding: 0 8px; background: linear-gradient(135deg, #fff, #dedede); }
+    .network-pill.wide-mark.collision-star { width: 190px; min-width: 190px; height: 50px; padding: 0; }
+    .network-pill.wide-mark.collision-star img { width: 100%; height: 100%; object-fit: contain; }
+    .network-language { display: inline-flex; min-height: 31px; flex: 0 0 auto; align-items: center; justify-content: center; gap: 7px; padding: 3px 12px; margin-left: auto; color: #fff; background: #382a2d; border: 1px solid #72585d; border-radius: 999px; font-size: 12px; font-weight: 800; line-height: 1; }
+    .network-language-flag { display: inline-block; width: 22px; height: 15px; flex: 0 0 auto; border-radius: 2px; background: linear-gradient(to bottom, #c91525 0 25%, #ffc928 25% 75%, #c91525 75% 100%); }
+    .page-artwork { display: block; width: 100%; height: auto; }
+    .affiliate-preview { position: fixed; z-index: 10001; display: flex; width: 270px; min-height: 92px; align-items: center; gap: 13px; padding: 10px 16px; color: #f5f5f6; background: linear-gradient(145deg, #29282b, #1e1d20); border: 1px solid #39383c; border-bottom: 3px solid #d53a3a; border-radius: 12px; box-shadow: 0 10px 24px rgba(0,0,0,.42); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-6px); transition: opacity .16s ease, transform .16s ease, visibility .16s ease; }
+    .affiliate-preview.is-visible { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+    .affiliate-preview-logo { display: grid; width: 58px; height: 58px; flex: 0 0 58px; place-items: center; padding: 5px; background: #fff; border-radius: 10px; }
+    .affiliate-preview-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .affiliate-preview-name { color: #f5f5f6; font-size: 14px; font-weight: 700; line-height: 1.35; }
+    @media (max-width: 560px) { .network-banner-inner { width: calc(100% - 20px); gap: 8px; padding-right: 10px; } .network-banner-label { font-size: 14px; } .network-pills { gap: 7px; } .network-pill { width: 36px; height: 36px; } .network-pill.wide-mark { width: 132px; min-width: 132px; height: 36px; } .network-pill.wide-mark.collision-star { width: 160px; min-width: 160px; height: 42px; padding: 0; } .network-language { padding: 3px 9px; font-size: 11px; } }
+  </style>
+</head>
+<body>
+  <header class="network-banner" aria-label="West Delray network partners">
+    <div class="network-banner-inner">
+      <span class="network-banner-label">Meet our affiliates</span>
+      <nav class="network-pills" aria-label="Network partner links">
+        <a class="network-pill" href="https://wdcc-dusky.vercel.app/" aria-label="West Delray Collision Center website" aria-describedby="affiliate-preview" data-affiliate-name="West Delray Collision Center"><img src="assets/west-delray-collision-logo.webp" alt="West Delray Collision Center logo"></a>
+        <a class="network-pill" href="index.html" aria-label="Car rental services" aria-describedby="affiliate-preview" data-affiliate-name="Car Rental Services"><img src="assets/car-rental-solutions.png" alt="Car rental services"></a>
+        <a class="network-pill wide-mark collision-star" href="shiningstar.html" aria-label="Shining Star Collision" aria-describedby="affiliate-preview" data-affiliate-name="Shining Star Collision"><img src="assets/shining-star-collision-logo.png" alt="Shining Star Collision"></a>
+      </nav>
+      <span class="network-language" lang="es">Se habla español</span>
+    </div>
+  </header>
+  <div class="affiliate-preview" id="affiliate-preview" role="tooltip" aria-hidden="true"><span class="affiliate-preview-logo"><img alt=""></span><span class="affiliate-preview-name"></span></div>
+  <main>
+    <img class="page-artwork" src="assets/thecollisionstar.png" alt="The Collision Star">
+  </main>
+  <script>
+    const preview = document.getElementById("affiliate-preview");
+    const previewImage = preview.querySelector("img");
+    const previewName = preview.querySelector(".affiliate-preview-name");
+    let previewTimer;
+    function hidePreview() { preview.classList.remove("is-visible"); preview.setAttribute("aria-hidden", "true"); }
+    function schedulePreviewHide() { window.clearTimeout(previewTimer); previewTimer = window.setTimeout(hidePreview, 180); }
+    function showPreview(link) {
+      window.clearTimeout(previewTimer);
+      const image = link.querySelector("img");
+      if (!image) return;
+      const bounds = link.getBoundingClientRect();
+      previewImage.src = image.currentSrc || image.src;
+      previewImage.alt = image.alt;
+      previewName.textContent = link.dataset.affiliateName || image.alt;
+      preview.style.left = Math.max(12, Math.min(bounds.left, window.innerWidth - 282)) + "px";
+      preview.style.top = Math.max(8, Math.min(bounds.bottom + 6, window.innerHeight - 104)) + "px";
+      preview.classList.add("is-visible");
+      preview.setAttribute("aria-hidden", "false");
+    }
+    document.querySelectorAll("[data-affiliate-name]").forEach(function (link) {
+      link.addEventListener("pointerenter", function () { showPreview(link); });
+      link.addEventListener("pointerleave", schedulePreviewHide);
+      link.addEventListener("focus", function () { showPreview(link); });
+      link.addEventListener("blur", schedulePreviewHide);
+    });
+    preview.addEventListener("pointerenter", function () { window.clearTimeout(previewTimer); });
+    preview.addEventListener("pointerleave", schedulePreviewHide);
+  </script>
+</body>
+</html>

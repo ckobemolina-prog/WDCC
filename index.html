@@ -153,6 +153,7 @@
       text-align: center;
     }
     .network-pill.wide-mark.collision-star { width: 228px; min-width: 228px; font-size: 21px; letter-spacing: -1px; }
+    .network-pill.wide-mark.shining-star-mark { width: 154px; min-width: 154px; }
     .network-pill.wide-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .network-pill:hover, .network-pill:focus-visible {
       position: relative;
@@ -238,6 +239,7 @@
       .network-pill { width: 36px; height: 36px; }
       .network-pill.wide-mark { width: 132px; min-width: 132px; height: 36px; font-size: 10px; }
       .network-pill.wide-mark.collision-star { width: 190px; min-width: 190px; font-size: 17px; }
+      .network-pill.wide-mark.shining-star-mark { width: 132px; min-width: 132px; }
       .network-language { padding-inline: 9px; font-size: 11px; }
       .site-header { top: 50px; }
     }
@@ -508,10 +510,11 @@
     <div class="container network-banner-inner">
       <span class="network-banner-label">Meet our affiliates</span>
       <nav class="network-pills" aria-label="Network partner links">
-        <a class="network-pill" href="https://wdcc-dusky.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="West Delray Collision Center website" aria-describedby="affiliate-preview" data-affiliate-name="West Delray Collision Center"><img src="assets/west-delray-collision-logo.webp" alt="West Delray Collision Center logo"></a>
+        <a class="network-pill" href="https://wdcc-dusky.vercel.app/" aria-label="West Delray Collision Center website" aria-describedby="affiliate-preview" data-affiliate-name="West Delray Collision Center"><img src="assets/west-delray-collision-logo.webp" alt="West Delray Collision Center logo"></a>
+        <a class="network-pill wide-mark shining-star-mark" href="shiningstar.html" aria-label="Shining Star Collision" aria-describedby="affiliate-preview" data-affiliate-name="Shining Star Collision"><img src="assets/shining-star-collision-logo.png" alt="Shining Star Collision"></a>
         <a class="network-pill wide-mark collision-star" href="index-WDC03.html" aria-label="The Collision Star" aria-describedby="affiliate-preview" data-affiliate-name="The Collision Star"><img src="assets/collision-star-logo.jpg" alt="The Collision Star"></a>
       </nav>
-      <span class="network-language" lang="es" tabindex="0" aria-describedby="affiliate-preview" data-affiliate-name="Se habla español"><span class="network-language-flag" aria-hidden="true"></span>Se habla español</span>
+      <span class="network-language" lang="es" tabindex="0" aria-describedby="affiliate-preview" data-affiliate-name="Se habla español">Se habla español</span>
     </div>
   </div>
   <div class="affiliate-preview" id="affiliate-preview" role="tooltip" aria-hidden="true">
@@ -520,7 +523,7 @@
   </div>
 
   <!-- Header: navigation intentionally limited to three primary destinations -->
-  <header class="site-header">a
+  <header class="site-header">
     <div class="container nav-shell">
       <a class="brand" href="#home" aria-label="West Delray Network home">
         <span class="brand-mark" aria-hidden="true">
