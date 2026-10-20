@@ -154,6 +154,7 @@
     }
     .network-pill.wide-mark.collision-star { width: 228px; min-width: 228px; font-size: 21px; letter-spacing: -1px; }
     .network-pill.wide-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .network-pill.rental-logo img { height: auto; }
     .network-pill:hover, .network-pill:focus-visible {
       position: relative;
       z-index: 1;
@@ -508,10 +509,7 @@
       <span class="network-banner-label">Meet our affiliates</span>
       <nav class="network-pills" aria-label="Network partner links">
         <a class="network-pill" href="https://wdcc-dusky.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="West Delray Collision Center website" aria-describedby="affiliate-preview" data-affiliate-name="West Delray Collision Center"><img src="assets/west-delray-collision-logo.webp" alt="West Delray Collision Center logo"></a>
-        <a class="network-pill" href="index-WDC04.html" aria-label="Ceramic coating and detailing" aria-describedby="affiliate-preview" data-affiliate-name="WD Detailing and Coating"><img src="assets/detailing-ceramic-coating.png" alt="WD Detailing and Coating logo"></a>
-        <a class="network-pill" href="index.html" aria-label="Car rental solutions" aria-describedby="affiliate-preview" data-affiliate-name="WD Rentals"><img src="assets/car-rental-solutions.png" alt="WD Rentals logo"></a>
-        <a class="network-pill wide-mark" href="#" aria-label="Shining Star Collision" aria-describedby="affiliate-preview" data-affiliate-name="Shining Star Collision"><img src="assets/shining-star-collision-logo.png" alt="Shining Star Collision"></a>
-        <a class="network-pill wide-mark collision-star" href="#" aria-label="The Collision Star" aria-describedby="affiliate-preview" data-affiliate-name="The Collision Star"><img src="assets/collision-star-logo.jpg" alt="The Collision Star"></a>
+        <a class="network-pill wide-mark rental-logo" href="index.html" aria-label="Car rental solutions" aria-describedby="affiliate-preview" data-affiliate-name="WD Rentals"><img src="assets/shining-star-collision-logo.png" alt="WD Rentals logo"></a>
       </nav>
       <span class="network-language" lang="es" tabindex="0" aria-describedby="affiliate-preview" data-affiliate-name="Se habla español"><span class="network-language-flag" aria-hidden="true"></span>Se habla español</span>
     </div>
@@ -890,7 +888,6 @@
       });
       affiliatePreview.addEventListener("pointerenter", function () { window.clearTimeout(affiliatePreviewTimer); });
       affiliatePreview.addEventListener("pointerleave", scheduleAffiliatePreviewHide);
-      let lastFocusedElement = null;
 
       // Mobile navigation.
       function closeMenu() {
